@@ -1,0 +1,38 @@
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    padding: 0px;
+    text-align: center;
+    font-size: 12;
+}
+
+.topicbox {
+	display: inline-block;
+	vertical-align: text-top;
+	border-radius: 4px;
+	border-width: 1px;
+	padding: 4px;
+	margin-left: 2px;
+	border: #bdb8b2 1px solid;
+	text-align: center;
+	margin-left: 0.4em;
+	box-shadow: 0px 0px 1px rgba(29, 120, 144, 0.11);
+	min-width: 500px;
+}
+
+.topicbutton {
+	width: 100%;
+}
+
+.policybutton {
+	/* background: #ffffff; */
+	width: 100%;
+}
+.policybutton:hover {
+	background: #a3a6cc;
+}

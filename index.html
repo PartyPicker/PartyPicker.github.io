@@ -30,7 +30,7 @@
 			Increase the minimum wage to £8.10 in 2015 and £10 per hour by 2020
 		    </button>
 			<div id="b1-q1-info" class="collapse party-info">
-			    <div>Green</div>
+			    <div class="green-support">Green</div>
 			</div>
 		</div>
 		
@@ -40,7 +40,7 @@
 			Introduce a maximum 35-hour working week
 		    </button>
 			<div id="b1-q2-info" class="collapse party-info">
-			    <div>Green</div>
+			    <div class="green-support">Green</div>
 			</div>
 		    </div>
 		</div>
@@ -61,7 +61,7 @@
 			Spend more than £3bn to 2020 improving the environment
 		    </button>
 			<div id="b2-q1-info" class="collapse party-info">
-			    <div>Tory</div>
+			    <div class="tory-support">Tory</div>
 			</div>
 		</div>
 		
@@ -71,7 +71,7 @@
 			Reduce carbon emissions generated during electricity production to zero by 2030
 		    </button>
 			<div id="b2-q2-info" class="collapse party-info">
-			    <div>Labour</div>
+			    <div class="labor-support">Labour</div>
 			</div>
 		    </div>
 		</div>
@@ -86,22 +86,34 @@
 <hr/>
 <script>
 //for each topic
-function myfunc() {
-var divs = document.getElementsByClassName("topicbox");
-for(var i = 0; i < divs.length; i++){
-   //do something to each div like
-   //divs[i].innerHTML = "something new...";
-//	count number of agreeing partys
-	var expanded = divs[i].getElementsByClassName("in");
-	for(var j = 0; j < expanded.length; j++){
-		console.log(expanded[j]);
-		return expanded[j];		
+function tallySupport() {
+	var classes = ["green-support", "tory-support", "labour-support"];
+	var limits = {"green-support":0, "tory-support":0, "labour-support":0};
+	var results = {"green-support":0, "tory-support":0, "labour-support":0};
+
+	for (var c in classes){
+		var thisclass = classes[c];
+		console.log(thisclass);
+		var divs = document.getElementsByClassName(thisclass);
+		for(var i = 0; i < divs.length; i++){
+		//do something to each div like
+		//divs[i].innerHTML = "something new...";
+		//	count number of agreeing partys
+			console.log(divs[i]);
+			limits[thisclass]+=1
+			 if(divs[i].parentElement.classList.contains("in"))
+				results[thisclass]+=1
+			/*var expanded = divs[i].getElementsByClassName("in");
+			for(var j = 0; j < expanded.length; j++){
+				console.log(expanded[j]);
+				return expanded[j];		
+			}*/
+		//	update barchrt
+		}
 	}
-//	update barchrt
+	return results;
 }
-return divs;
-}
-myfunc();
+tallySupport();
 </script>
 
 </body>

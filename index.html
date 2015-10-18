@@ -112,6 +112,9 @@ function tallySupport() {
 		//	update barchrt
 		}
 	}
+	for (r in results){
+		results[r]=results[r]/limits[r]*100.;
+		}
 	return results;
 }
 tallySupport();
@@ -181,7 +184,7 @@ function makechart(data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Agreement");
+      .text("Agreement%");
 
   var state = svg.selectAll(".state")
       .data(data)

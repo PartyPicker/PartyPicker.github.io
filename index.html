@@ -72,7 +72,7 @@
 			Reduce carbon emissions generated during electricity production to zero by 2030
 		    </button>
 			<div id="b2-q2-info" class="collapse party-info">
-			    <div class="labor-support">Labour</div>
+			    <div class="labour-support">Labour</div>
 			</div>
 		    </div>
 		</div>
@@ -80,7 +80,7 @@
 	
 	
         
-        
+       <svg></svg> 
         
 </div>
 
@@ -139,24 +139,32 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .tickFormat(d3.format(".2s"));
+    .tickFormat(d3.format("1s"));
 
 var svg = d3.select("body").append("svg")
+//var svg = d3.select("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
 function makechart(data) {
-
-  var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "State"; });
+	svg[0][0].innerHTML="";
+	
+	//if (data==undefined){
+		data=[tallySupport()];
+	//	}
+	console.log("data is:");
+	console.log(data)
+  var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "Party"; });
 
   data.forEach(function(d) {
     d.ages = ageNames.map(function(name) { return {name: name, value: +d[name]}; });
   });
 
-  x0.domain(data.map(function(d) { return d.State; }));
-  console.log(x0);
+  console.log(x0());
+  x0.domain(data.map(function(d) { return d.Party; }));
+  console.log(x0());
   x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
   y.domain([0, d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);
 
@@ -173,7 +181,7 @@ function makechart(data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Population");
+      .text("Agreement");
 
   var state = svg.selectAll(".state")
       .data(data)
@@ -211,6 +219,7 @@ function makechart(data) {
 
 };
 
+$("button").click(function(){setTimeout(function(){ makechart(); }, 500);})
 </script>
 
 </body>

@@ -12,11 +12,19 @@ for (pbi in pbuttons){
 	collapser.id=qid;
 }
 
+var classes = ["green-support", "tory-support", "labour-support", "ukip-support", "libdem-support", "snp-support"];
 //for each topic
 function tallySupport() {
-	var classes = ["green-support", "tory-support", "labour-support", "ukip-support", "libdem-support", "snp-support"];
-	var limits = {"green-support":0, "tory-support":0, "labour-support":0, "ukip-support":0, "libdem-support":0, "snp-support":0};
-	var results = {"green-support":0, "tory-support":0, "labour-support":0, "ukip-support":0, "libdem-support":0, "snp-support":0};
+	
+	var limits = {};
+	var results = {};
+	for (var c in classes){
+		var thisclass = classes[c];
+		limits[thisclass]=0;
+		results[thisclass]=0;
+	}
+	//var limits = {"green-support":0, "tory-support":0, "labour-support":0, "ukip-support":0, "libdem-support":0, "snp-support":0};
+	//var results = {"green-support":0, "tory-support":0, "labour-support":0, "ukip-support":0, "libdem-support":0, "snp-support":0};
 
 	for (var c in classes){
 		var thisclass = classes[c];

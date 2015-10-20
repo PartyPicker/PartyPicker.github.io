@@ -61,3 +61,14 @@ hr {
 	background: #B3B5CC;
 	border-color: white;
 }
+
+g.legend {
+    font-family: roboto;
+    font-weight: 300;
+}
+
+g.y.axis {
+    font-family: roboto;
+    font-weight: 300;
+    font-size: 20px;
+}

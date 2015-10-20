@@ -1,13 +1,16 @@
 h1 {
-    font-family: ubuntu light;
-    padding-top: 20px;
+    font-family: Roboto;
+    font-weight: 100;
+    padding-top: 40px;
     text-align: center;
-    font-size: 56px;
+    font-size: 66px;
 }
 
 h2 {
-    font-family: ubuntu light;
-    padding-bottom: 20px;
+    font-family: roboto, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    padding-bottom: 40px;
     text-align: center;
     font-size: 30px;
 }
@@ -50,7 +53,8 @@ hr {
 }
 
 .btn {
-    font-family: ubuntu;
+    font-family: roboto;
+    font-weight: 300;
     color: #382A2A;
 }
 .policybutton:hover {

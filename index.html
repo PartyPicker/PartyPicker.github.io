@@ -875,6 +875,20 @@
 
 <hr/>
 <script>
+
+var a=$(".policybutton")[0]
+a.parentNode.getElementsByClassName("party-info")
+
+var pbuttons = $(".policybutton");
+for (pbi in pbuttons){
+	if (isNaN(pbi))break;
+	var pb = pbuttons[pbi];
+	var collapser = pb.parentNode.getElementsByClassName("party-info")[0];
+	var qid = "questionid-"+parseInt(pbi);
+	pb.setAttribute("data-target", "#"+qid);
+	collapser.id=qid;
+}
+
 //for each topic
 function tallySupport() {
 	var classes = ["green-support", "tory-support", "labour-support", "ukip-support", "libdem-support", "snp-support"];

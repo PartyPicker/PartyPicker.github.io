@@ -27,7 +27,9 @@ hr {
 	text-align: center;
 	margin-left: 0.4em;
 	/* box-shadow: 0px 0px 0px rgba(29, 120, 144, 0.11); */
-	width: 500px;
+	width: 32%;
+	min-width: 300px;
+	max-width: 600px;
 }
 
 .topicbutton {

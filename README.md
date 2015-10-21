@@ -12,9 +12,10 @@ Next steps:
 - Add basic profile / login - google/facebook - (+ linked to voteflow)
 - Add function for people to rate parties by trust
 - Add a "Name Your Custom Party" function, so people can name the party based on their custom combination of policies +  add an image for the logo
+- Add your own policies to your custom party
 - Add a printable summary page of results - bar chart, custom party name + logo, pie chart
 - Create database for more automated data input
-- See who is similar to you function - maybe linked through VoteFLow?
+- See who is similar to you function - (maybe linked through VoteFLow?)
 - Select people to represent you in specific topics
 
 

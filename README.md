@@ -23,14 +23,15 @@ Next steps:
 -----------------------------------------------------
 Ambition 1: evolve into project boost cycle platform
 -----------------------------------------------------
+
 Some general principles to work towards:
 
-Needs-centred dialogue (similar to Nonviolent Communication)
-Socio-ecological context
-Empiricism
-Automation
-Cooperation
-Consent
+- Needs-centred dialogue (similar to Nonviolent Communication)
+- Socio-ecological context
+- Empiricism
+- Automation
+- Cooperation
+- Consent
 
 People don't "vote" agree/disagree on proposals, instead there are facilitated stages and rounds to meet community needs and solve problems. These stages represent a cycle. The method is often made dynamic and enjoyable by the facilitator. 
 

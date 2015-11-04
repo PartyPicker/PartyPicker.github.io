@@ -57,8 +57,15 @@ hr {
     font-weight: 300;
     color: #382A2A;
 }
+
 .policybutton:hover {
-	background: #B3B5CC;
+	background: #A2A8D2;
+	border-color: white;
+}
+
+}
+.policybutton:active {
+	background: #3B76B0;
 	border-color: white;
 }
 

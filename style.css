@@ -65,14 +65,16 @@ hr {
 
 }
 .policybutton:active {
-	background: #3B76B0;
+	background: #FF0066;
 	border-color: white;
 }
 
+/*
 .policybutton:focus {
 	background: #3B76B0;
 	border-color: white;
-}
+} 
+*/
 
 g.legend {
     font-family: roboto;

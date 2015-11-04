@@ -69,6 +69,11 @@ hr {
 	border-color: white;
 }
 
+.policybutton:focus {
+	background: #3B76B0;
+	border-color: white;
+}
+
 g.legend {
     font-family: roboto;
     font-weight: 300;
